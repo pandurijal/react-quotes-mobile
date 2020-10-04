@@ -10,12 +10,16 @@ export const Card = (props: Card) => {
   const { quote, author } = props;
   return (
     <View style={styles.card}>
-      <Text>{quote}</Text>
-      <Text>{author}</Text>
+      <Text style={styles.quote}>{quote}</Text>
+      <Text style={styles.author}>&mdash; {author}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   card: { padding: 20, borderWidth: 1, borderColor: "grey" },
+  quote: {},
+  author: {
+    marginVertical: 12,
+  },
 });
